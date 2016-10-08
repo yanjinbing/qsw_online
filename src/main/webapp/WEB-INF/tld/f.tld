@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib 
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>f</short-name>
+	<uri>http://gct.bjut.edu.cn/functions</uri>
+
+	<function>
+		<name>formatHTML</name>
+		<function-class>cn.edu.bjut.gct.web.TagsFunction</function-class>
+		<function-signature>java.lang.String formatHTML(java.lang.String, java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>formatNumber</name>
+		<function-class>cn.edu.bjut.gct.web.TagsFunction</function-class>
+		<function-signature>java.lang.String formatNumber(java.lang.String)</function-signature>
+	</function>
+
+
+	<function>
+		<name>formatBookID</name>
+		<function-class>cn.edu.bjut.gct.web.TagsFunction</function-class>
+		<function-signature>java.lang.String formatBookID(int, int)</function-signature>
+	</function>
+
+</taglib>
