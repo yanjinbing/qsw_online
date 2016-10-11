@@ -1,0 +1,23 @@
+
+.tit {
+    display: inline-block;
+    width:20%;
+    height:50px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.cent {
+    display: block;
+    align:center;
+    text-align: center;
+    height:50px;
+}
+
+.star{
+	color:red;
+}
+
+.space{
+	padding-left:10px;
+}

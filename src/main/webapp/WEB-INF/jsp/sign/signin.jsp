@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>用户注册</title>
+<title>用户登录</title>
 <link rel="stylesheet" href="<c:url value='css/bootstrap.min.css' />" />
 <link rel="stylesheet" href="<c:url value='css/main.css' />" />
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -16,9 +16,9 @@
 		<div class="row">
 			<div class="col-md-12" role="main">
 				<div class="center-block" style="width: 600px;margin-bottom: 30px">
-					<form class="center-block" action="${ctx }/dosignup.do" method="post">
+					<form class="center-block" action="${ctx }/dosignin.do" method="post">
 						<ul class="list-unstyled">
-						<li class="cent"><H2>欢迎注册</H2></li>
+						<li class="cent"><H2>欢迎登录</H2></li>
 						<li class="cent"></li>
 						<li  class="center-block">
 						<span class="tit">用户名：</span>
@@ -30,17 +30,8 @@
 						<span><input class="input-lg" id="pass" name="pass" type="password" placeholder="请输入密码" size="30"/> </span>
 						<span class="star">*</span>
 						</li>
-						<li  class="center-block">
-						<span class="tit">确认密码：</span>
-						<span><input class="input-lg" id="conf" name="conf" type="password" placeholder="请再次输入密码" size="30"/> </span>
-						<span class="star">*</span>
-						</li>
-						<li  class="center-block">
-						<span class="tit">邮箱：</span>
-						<span><input class="input-lg" id="mail" name="mail" type="text" placeholder="请输入邮箱" size="30"/></span>
-						</li>
 						<li  class="cent">
-						<input class="input-lg" type="submit" value="注册"  onclick="return check_signup();" />
+						<input class="input-lg" type="submit" value="登录" onclick="return check_signin();"/>
 						</li>
 						</ul>
 					</form>

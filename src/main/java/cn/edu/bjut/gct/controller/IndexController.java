@@ -3,6 +3,8 @@ package cn.edu.bjut.gct.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +41,11 @@ public class IndexController {
 	 * 头部模板，显示用户信息
 	 */
 	@RequestMapping("/header.do")
-	public String header(Model model) {
-		model.addAttribute("user", "Hello, World!");
+	public String header(Model model, HttpSession session) {
+		
+		if(session.getAttribute("username") != null){
+			model.addAttribute("username", session.getAttribute("username"));
+		}
 		return "header";
 	}
 
