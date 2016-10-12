@@ -59,8 +59,10 @@ public class BookMgrServiceImpl extends SolrQueryService implements BookMgrServi
 			Book book = new Book();
 			book.setName(id);
 			book.setAuthors(getAuthors(book.getName()));
-			book.setVolumeNO((int) book.getAuthors().get(0).getFieldValue("volumeNO"));
-			books.add(book);
+			if (book.getAuthors().size() > 0){
+				book.setVolumeNO((int) book.getAuthors().get(0).getFieldValue("volumeNO"));
+				books.add(book);
+			}
 		}
 		return books;
 	}

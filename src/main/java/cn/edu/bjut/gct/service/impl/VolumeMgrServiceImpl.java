@@ -36,7 +36,7 @@ public class VolumeMgrServiceImpl extends SolrQueryService implements VolumeMgrS
 			Map<String, List<String>> hlr = hlrs.get(doc.get("Identifier"));
 			for (String fieldName : doc.getFieldNames()) {
 				if (hlr.containsKey(fieldName))
-					doc.setField(fieldName, hlr.get(fieldName));
+					doc.setField(fieldName, hlr.get(fieldName).get(0));
 			}
 		}
 		return response;
