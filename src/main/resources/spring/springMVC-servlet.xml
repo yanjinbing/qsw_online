@@ -18,6 +18,14 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<mvc:interceptors>
+		 <mvc:interceptor> 
+			<mvc:mapping path="/**"/>  
+			<bean id="authInterceptor" class="cn.edu.bjut.gct.web.AuthInterceptor">
+			</bean>
+		 </mvc:interceptor>
+	</mvc:interceptors>
 </beans>
 
 
