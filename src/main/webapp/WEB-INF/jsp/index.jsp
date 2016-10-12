@@ -6,8 +6,8 @@
 <title>支持全文检索的在线阅读系统</title>
 <link rel="stylesheet" href="<c:url value='css/bootstrap.min.css' />" />
 <link rel="stylesheet" href="<c:url value='css/main.css' />" />
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script src="http://libs.baidu.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="${ctx}/js/jquery.min.js"></script>
+<script src="${ctx}/js/bootstrap.min.js"></script>
 <style>
 
 em{
@@ -88,7 +88,7 @@ padding-bottom: 10px;
 		
 
 	</div>
-	<c:import url="footer.jsp" />
+	<c:import url="/WEB-INF/jsp/footer.jsp" />
 
 </body>
 </html>

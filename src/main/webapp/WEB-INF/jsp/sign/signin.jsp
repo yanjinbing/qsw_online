@@ -6,8 +6,8 @@
 <title>用户登录</title>
 <link rel="stylesheet" href="<c:url value='css/bootstrap.min.css' />" />
 <link rel="stylesheet" href="<c:url value='css/main.css' />" />
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script src="http://libs.baidu.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="${ctx}/js/jquery.min.js"></script>
+<script src="${ctx}/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </head>
 <body>

@@ -57,7 +57,7 @@ ul.nav-pills {
 				<c:forEach var="volume" items="${docs }">
 					<div class="bs-docs-section">
 						<h3 id="${fn:replace(volume.Identifier, ':', '')}">
-							<b><a href="/FlexPaper/common/split_document.jsp?doc=002.pdf" target="flexPaper">${volume.title}</a></b>
+							<b><a href="/FlexPaper/common/split_document.jsp?doc=002.pdf&page=32" target="flexPaper">${volume.title}</a></b>
 						</h3>
 						<p>${f:formatHTML(volume.data, "<p>")}</p>
 						<hr />
