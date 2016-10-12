@@ -22,22 +22,22 @@
 						<li class="cent"></li>
 						<li  class="center-block">
 						<span class="tit">用户名：</span>
-						<span><input class="input-lg" id="name" name="name" type="text" placeholder="请输入用户名" size="30"/> </span>
+						<span><input class="input-lg" id="name" name="name" type="text" placeholder="请输入用户名" size="30" value="admin"/> </span>
 						<span class="star">*</span>
 						</li>
 						<li  class="center-block">
 						<span class="tit">密码：</span>
-						<span><input class="input-lg" id="pass" name="pass" type="password" placeholder="请输入密码" size="30"/> </span>
+						<span><input class="input-lg" id="pass" name="pass" type="password" placeholder="请输入密码" size="30" value="123"/> </span>
 						<span class="star">*</span>
 						</li>
 						<li  class="center-block">
 						<span class="tit">确认密码：</span>
-						<span><input class="input-lg" id="conf" name="conf" type="password" placeholder="请再次输入密码" size="30"/> </span>
+						<span><input class="input-lg" id="conf" name="conf" type="password" placeholder="请再次输入密码" size="30" value="123"/> </span>
 						<span class="star">*</span>
 						</li>
 						<li  class="center-block">
 						<span class="tit">邮箱：</span>
-						<span><input class="input-lg" id="mail" name="mail" type="text" placeholder="请输入邮箱" size="30"/></span>
+						<span><input class="input-lg" id="mail" name="mail" type="text" placeholder="请输入邮箱" size="30" value="a@a.com"/></span>
 						</li>
 						<li  class="cent">
 						<input class="input-lg" type="submit" value="注册"  onclick="return check_signup();" />

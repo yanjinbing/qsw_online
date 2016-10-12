@@ -52,7 +52,7 @@ public class UserController {
 		session.setAttribute("username", null);
 		session.setAttribute("pay", null);
 
-		return "index";
+		return "forward:index.do";
 	}
 	
 	/**

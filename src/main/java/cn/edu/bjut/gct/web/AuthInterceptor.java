@@ -12,19 +12,20 @@ public class AuthInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-
-		HttpSession session = request.getSession();
-				
-		String[] needLoginUrls = new String[]{"/buy","/detail"};
+		String[] excludeUrls = new String[]{"/signin","dosignin", "signup", "dosignup", "signout"};
 		String[] needPayUrls = new String[]{"/detail"};
-				
+
+		HttpSession session = request.getSession();				
 		String curUrl = request.getRequestURL().toString();
-		for (String url : needLoginUrls) {
+				
+		for (String url : excludeUrls) {
 			if(curUrl.contains(url)){
-				if(session.getAttribute("username") == null){
-					response.sendRedirect(request.getContextPath()+"/signin.do");
-				}
+				return true;
 			}
+		}
+		
+		if (session.getAttribute("username") == null) {
+			response.sendRedirect(request.getContextPath() + "/signin.do");
 		}
 		for (String url : needPayUrls) {
 			if(curUrl.contains(url)){
