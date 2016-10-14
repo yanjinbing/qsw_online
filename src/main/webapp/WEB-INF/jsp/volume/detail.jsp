@@ -19,6 +19,18 @@
 	text-indent: 2em;
 }
 
+node{
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 1.4em;	
+}
+
+node br{
+	text-indent: 2em;
+}
+.catalog node{
+	display: none;
+}
 .content_header {
 	background-color: beige;
 	padding-top: 10px;
@@ -59,7 +71,7 @@ ul.nav-pills {
 						<h3 id="${fn:replace(volume.Identifier, ':', '')}">
 							<b><a href="/FlexPaper/common/split_document.jsp?doc=002.pdf&page=32" target="flexPaper">${volume.title}</a></b>
 						</h3>
-						<p>${f:formatHTML(volume.data, "<p>")}</p>
+						<p>${f:formatHTML(volume.data, "<br />&nbsp;&nbsp;")}</p>
 						<hr />
 					</div>
 				</c:forEach>
@@ -77,7 +89,7 @@ ul.nav-pills {
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 scrollspy">			
+			<div class="col-md-3 scrollspy catalog">			
 				<ul class="nav nav-pills nav-stacked " data-spy="affix" data-offset-top="100">
 					<li><b>目录</b></li>
 					<c:forEach var="volume" items="${docs }">

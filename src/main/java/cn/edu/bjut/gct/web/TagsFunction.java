@@ -4,10 +4,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TagsFunction {
+	public static String trimEnter(String text){
+		Pattern CRLF = Pattern.compile("([\r\n|\r|\n|\n\r]*$)");
+		Matcher m = CRLF.matcher(text.trim());
+
+		if (m.find()) {
+			text = m.replaceAll("");
+		}
+		return text;
+	}
 	public static String formatHTML(String text, String tags) {
 		String html = text;
 		Pattern CRLF = Pattern.compile("(\r\n|\r|\n|\n\r)");
-		Matcher m = CRLF.matcher(text);
+		Matcher m = CRLF.matcher(trimEnter(text));
 
 		if (m.find()) {
 			html = m.replaceAll(tags);
@@ -46,6 +55,11 @@ public class TagsFunction {
 		}
 		ids.deleteCharAt(ids.length() - 1);
 		return ids.toString();
+	}
+	
+	public static void main(String[] args){
+		String s = "aa\r\nbbbb\n";
+		System.out.println(formatHTML(s, "|||"));
 	}
 
 }
