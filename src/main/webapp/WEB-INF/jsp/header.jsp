@@ -25,7 +25,7 @@
 		</div>
 		</div>
 		<div class="masthead">
-			<h1 class="muted">支持全文检索的在线阅读系统</h1>
+			<h1 class="muted">在线阅读系统<a href="${ctx }/index.do" style="font-size:14px">《全宋文》库</a></h1>
 		</div>
 	</div>
 </nav>

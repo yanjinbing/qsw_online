@@ -41,7 +41,7 @@ select.input-lg,.input-lg{
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
-				<a href="${ctx }/index.do">全宋文</a>册列表		
+				360册图书列表		
 				<div class="list-group">
 				<c:forEach var="i" begin="0" end="44" step="1">
 					<a href="${ctx}/index.do?id=${i}" class="list-group-item <c:if test='${param.id==i}'>active</c:if>">第${f:formatNumber(i*8+1)}册--第${f:formatNumber(i*8+8)}册</a>

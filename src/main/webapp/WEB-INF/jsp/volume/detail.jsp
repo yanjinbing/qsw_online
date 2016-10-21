@@ -54,7 +54,7 @@ ul.nav-pills {
 		<div class="row">
 			<div class="col-md-9" role="main">
 				<div class="row content_header">
-					<div class="col-md-4"><a href="${ctx }/index.do">全宋文</a>${docs[0].publication}</div>
+					<div class="col-md-4">${docs[0].publication}</div>
 					<div class="col-md-3 text-center">${docs[0].volume }</div>
 					<div class="col-md-5 text-right">
 						<c:if test="${docs[0].volumeNO > 1}">上一卷：
